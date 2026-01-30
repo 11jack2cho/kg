@@ -20,8 +20,8 @@ if (!url.startsWith(githubPrefix)) {
     return;
 }
 
-if (changeTo == "") {
-    headers["host"] = "A镜像"
+if (changeTo == "A镜像") {
+    headers["host"] = "fastraw.ixnic.net"
     url = url.replace(githubPrefix,fastrawPrefix)
 } else if (changeTo == "B镜像") {
     headers["host"] = "hub.incept.pw"
