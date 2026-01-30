@@ -1,9 +1,3 @@
-// 可以在脚本开头添加可用性检查
-let availableMirrors = {
-    "A镜像": { host: "fastraw.ixnic.net", url: fastrawPrefix, available: true },
-    "B镜像": { host: "hub.incept.pw", url: hubinceptPrefix, available: true },
-    "C镜像": { host: "raw.kkgithub.com", url: kkgithubPrefix, available: false } // 标记为不可用
-}
 
 let githubPrefix = "https://raw.githubusercontent.com/"
 let fastrawPrefix = "https://fastraw.ixnic.net/" // 由FastGit群组成员 @duya1234567 提供，代号A镜像。
