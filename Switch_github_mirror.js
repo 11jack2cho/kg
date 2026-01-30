@@ -15,20 +15,16 @@ var headers = $request.headers
 delete headers.host
 delete headers.Host
 
-if (!url.startsWith(githubPrefix)) {
+if (url.startsWith(githubPrefix)) {
     $done({});
     return;
 }
 
-if (changeTo == "A镜像") {
-    headers["host"] = "fastraw.ixnic.net"
-    url = url.replace(githubPrefix,fastrawPrefix)
-} else if (changeTo == "B镜像") {
-    headers["host"] = "hub.incept.pw"
-    url = url.replace(githubPrefix,hubinceptPrefix)
-} else if (changeTo == "C镜像") {
-    headers["host"] = "raw.kkgithub.com"
-    url = url.replace(githubPrefix,kkgithubPrefix)
+if (changeTo == "A镜像") {headers["host"] = "fastraw.ixnic.net" url = url.replace(githubPrefix,fastrawPrefix)
+} 
+else if (changeTo == "B镜像") {headers["host"] = "hub.incept.pw" url = url.replace(githubPrefix,hubinceptPrefix)
+} 
+else if (changeTo == "C镜像") {headers["host"] = "raw.kkgithub.com" url = url.replace(githubPrefix,kkgithubPrefix)
 }
 
 $done({url:url,headers:headers})
